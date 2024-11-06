@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원가입</title>
+
+        <!-- 레믹스아이콘 사용 Link -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+        <!-- 디자인 css Link -->
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./css/main-Swiper.css" />
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/main-Swiper.js" defer></script>
+        <!-- 공통 CSS -->
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
+
+        <!-- 위 페이지 CSS -->
+        <link rel="stylesheet" href="login&join.css" />
+
+        <!-- 모바일 GNB js -->
+        <script src="./js/header-nav.js"></script>
+
+        <!-- 다크 & 화이트 모드 -->
+        <link rel="stylesheet" href="./css/dark.css" />
+        <script src="./js/dark.js" defer></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="inner">
+                <div class="user-info">
+                    <a href="./login.html"><button class="login">로그인</button></a>
+                    <a href="./join.html"><button class="join">회원가입</button></a>
+                </div>
+                <div class="header-wrap">
+                    <h1 class="logo">
+                        <a href="#"><img src="" alt="" /></a>
+                    </h1>
+                    <!-- PC-nav -->
+                    <nav class="gnb">
+                        <ul>
+                            <li>
+                                <a href="">메뉴1</a>
+                                <div class="menu-wrap">
+                                    <a href="">메뉴1</a>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                                <ul class="sub-gnb">
+                                    <li><a href="https://www.naver.com/">서브메뉴1</a></li>
+                                    <li><a href="#">서브메뉴2</a></li>
+                                    <li><a href="#">서브메뉴3</a></li>
+                                    <li><a href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="">메뉴2</a>
+                                <div class="menu-wrap">
+                                    <a href="">메뉴2</a>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                                <ul class="sub-gnb">
+                                    <li><a href="#">서브메뉴1</a></li>
+                                    <li><a href="#">서브메뉴2</a></li>
+                                    <li><a href="#">서브메뉴3</a></li>
+                                    <li><a href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="">메뉴3</a>
+                                <div class="menu-wrap">
+                                    <a href="">메뉴3</a>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                                <ul class="sub-gnb">
+                                    <li><a href="#">서브메뉴1</a></li>
+                                    <li><a href="#">서브메뉴2</a></li>
+                                    <li><a href="#">서브메뉴3</a></li>
+                                    <li><a href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="">메뉴4</a>
+                                <div class="menu-wrap">
+                                    <a href="">메뉴4</a>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                                <ul class="sub-gnb">
+                                    <li><a href="#">서브메뉴1</a></li>
+                                    <li><a href="#">서브메뉴2</a></li>
+                                    <li><a href="#">서브메뉴3</a></li>
+                                    <li><a href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">메뉴5</a>
+                                <div class="menu-wrap">
+                                    <a href="">메뉴5</a>
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                                <ul class="sub-gnb">
+                                    <li><a href="#">서브메뉴1</a></li>
+                                    <li><a href="#">서브메뉴2</a></li>
+                                    <li><a href="#">서브메뉴3</a></li>
+                                    <li><a href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Mobile-nav -->
+                    <div class="Mobile-nav">
+                        <div class="menu">
+                            <button id="btn1" onclick="toggleMenu()">
+                                <i class="ri-menu-fill"></i>
+                            </button>
+                            <button id="btn2" style="display: none" onclick="toggleMenu()">
+                                <i class="ri-close-fill"></i>
+                            </button>
+                        </div>
+                        <div class="user-info-M">
+                            <button class="login">로그인</button>
+                            <button class="join">회원가입</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="form-container">
+                    <h2>회원가입</h2>
+                    <form action="/signup" method="POST">
+                        <div class="input-group">
+                            <label for="email">이메일</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="username">아이디</label>
+                            <input type="text" id="username" name="username" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="password">비밀번호</label>
+                            <input type="password" id="password" name="password" required />
+                        </div>
+                        <div class="input-group">
+                            <label for="confirm-password">비밀번호 확인</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required />
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit">회원가입</button>
+                        </div>
+                        <div class="form-footer">
+                            <p>이미 회원이신가요? <a href="login.html">로그인</a></p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="inner">
+                <div class="f-info">
+                    <a href="#" class="footerLogo"><img src="images/logo2.png" alt="" /></a>
+                    <p>Copyright All rights reserved</p>
+                    <div class="sns">
+                        <a href="#"><img src="images/sns1.png" alt="페이스북" /></a>
+                        <a href="#"><img src="images/sns2.png" alt="인스타그램" /></a>
+                        <a href="#"><img src="images/sns3.png" alt="트위터" /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
