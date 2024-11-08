@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>게시판 목록</title>
+        <link rel="stylesheet" href="styles.css" />
+        <!-- 스타일시트 연결 -->
+    </head>
+    <body>
+        <header>
+            <h1>게시판 목록</h1>
+            <nav>
+                <a href="/">홈</a>
+                <a href="/write">글쓰기</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <a href="/board/new" class="btn-write">글쓰기</a>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 게시글 목록 예시 -->
+                        <tr>
+                            <td>1</td>
+                            <td><a href="/board/1">첫 번째 게시글 제목</a></td>
+                            <td>홍길동</td>
+                            <td>2024-11-07</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="/board/2">두 번째 게시글 제목</a></td>
+                            <td>김철수</td>
+                            <td>2024-11-06</td>
+                            <td>55</td>
+                        </tr>
+                        <!-- 더 많은 게시글이 여기에 나올 수 있습니다 -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 게시판 사이트</p>
+        </footer>
+    </body>
+</html>

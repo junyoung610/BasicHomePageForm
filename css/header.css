@@ -34,8 +34,8 @@
 .menu-wrap {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 10px 0;
+    justify-content: space-around;
+    /* padding: 0 30px 0 10px; */
 }
 
 .menu-wrap i {
@@ -66,7 +66,7 @@
 }
 
 /* 서브메뉴 배경 */
-.header-wrap::after {
+.gnb::after {
     content: "";
     position: absolute;
     left: 0;
@@ -80,7 +80,7 @@
 }
 
 /* 호버 시 배경 높이 */
-.header-wrap:hover::after {
+.gnb:hover::after {
     height: 190px;
 }
 
@@ -100,7 +100,7 @@
 }
 
 /* 헤더 호버 시 모든 서브메뉴 표시 */
-.header-wrap:hover .sub-gnb {
+.gnb:hover .sub-gnb {
     visibility: visible;
     opacity: 1;
 }
@@ -130,7 +130,7 @@
 }
 
 /* 반응형 스타일 */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     .inner {
         width: 100%;
     }
@@ -203,9 +203,9 @@
 
     .gnb > ul {
         flex-direction: column;
-        padding: 130px 0;
+        /* padding: 130px 0; */
         position: relative;
-        top: 3%;
+        top: 20%;
     }
 
     .gnb > ul > li {
